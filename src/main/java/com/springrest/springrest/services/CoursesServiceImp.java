@@ -2,7 +2,6 @@ package com.springrest.springrest.services;
 
 import java.util.ArrayList;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.springrest.springrest.entities.Courses;
@@ -18,7 +17,6 @@ public class CoursesServiceImp implements CourseService{
 	}
 	@Override
 	public ArrayList<Courses> getCourses() {
-		// TODO Auto-generated method stub
 		return list;
 	}
 	@Override
@@ -36,6 +34,26 @@ public class CoursesServiceImp implements CourseService{
 	public Courses addCourse(Courses course) {
 		list.add(course);
 		return course;
+	}
+
+	@Override
+	public Courses updateCourse (Courses course) {
+		for(Courses temp : list) {
+			if(temp.getId() == course.getId()) {
+				temp.setCourseName(course.getCourseName());
+				temp.setDescription(course.getDescription());
+			}
+		}
+		return course;
+	}
+	
+	@Override
+	public void deleteCourse(long courseId) {
+		for(Courses temp : list) {
+			if(temp.getId() == courseId) {
+				list.remove(temp);
+			}
+		}
 	}
 	
 }
