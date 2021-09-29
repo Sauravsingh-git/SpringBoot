@@ -26,5 +26,6 @@
 >> for home page : https://heroku-rest-trail.herokuapp.com/home  
 >> for all the courses available : https://heroku-rest-trail.herokuapp.com/courses  
 >> for a specific courses with courseId : https://heroku-rest-trail.herokuapp.com/home/courseId  
+>> here couseId is not a string but id of a valid course in the courses i.e, 133, 123 etc.
  
 
