@@ -1,0 +1,17 @@
+architecture of J2EE
+
+client> which sends http request to server
+
+first phase
+	controllers > accept the request
+	service layer > provides service to the controllers
+	Dao/ Repository layer > helps service layer to accesses data
+
+API URLs
+
+GET > to get the information
+POST > to add the data
+PUT > Update the course
+DELETE > to delete
+
+convention > try to use the same url for different requests
